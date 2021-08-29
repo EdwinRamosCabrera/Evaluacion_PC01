@@ -1,2 +1,4 @@
 bin/
 obj/
+demomvc/obj/Debug/net5.0/demomvc.assets.cache
+demomvc/obj/Debug/net5.0/project.razor.json
