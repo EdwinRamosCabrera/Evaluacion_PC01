@@ -1,0 +1,57 @@
+﻿@model demomvc.Models.Registro
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<div class="Container">
+
+    <div class="row">
+        <div class="col">
+
+            <h1 style="text-align: center; padding: 1%;">FORMULARIO DE REGISTRO DE VIDEOJUEGOS</h1>
+
+            <form asp-controller="Registro" asp-action="Create">
+
+                <div>
+                    <h6><label>Producto:</label></h6>
+                    <input asp-for="producto" class="form-control form-control-sm" />
+
+                    <h6><label style="padding: 1%;">Nombre:</label></h6>
+                    <input asp-for="nombre" class="form-control" />
+                </div>
+
+                <h6 style="padding: 1%;">Categoria:</h6>
+                <div>
+                    <select asp-for="categoria">
+                        <option value="Adultos">Adultos</option>
+                        <option value="Jovenes">Jovenes</option>
+                        <option value="Niños">Niños</option>
+                    </select>
+                </div>
+
+                <div>
+                    <h6 style="padding: 2%;"><label>Precio (S/):</label></h6>
+                    <input asp-for="precio" class="form-control" />
+                </div>
+
+
+                <h6 style="padding: 1%;"><label>Descuento (%):</label></h6>
+                <input asp-for="descuento" class="form-control" />
+
+
+
+                <div style="padding: 2%;" class="form-group">
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </div>
+            </form>
+
+            <h3>@ViewData["Message"]</h3>
+
+        </div>
+
+        <div class="col">
+
+        </div>
+    </div>
+
+</div>

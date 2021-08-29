@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\demomvc.csproj": {}
+    "D:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\demomvc.csproj": {}
   },
   "projects": {
-    "d:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\demomvc.csproj": {
+    "D:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\demomvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\demomvc.csproj",
+        "projectUniqueName": "D:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\demomvc.csproj",
         "projectName": "demomvc",
-        "projectPath": "d:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\demomvc.csproj",
+        "projectPath": "D:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\demomvc.csproj",
         "packagesPath": "C:\\Users\\Edwin\\.nuget\\packages\\",
-        "outputPath": "d:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\obj\\",
+        "outputPath": "D:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Edwin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,22 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

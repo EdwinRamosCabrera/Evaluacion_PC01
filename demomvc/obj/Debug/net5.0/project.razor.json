@@ -15649,6 +15649,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\Views\\Registro\\Index.cshtml",
+      "TargetPath": "Views\\Registro\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Github\\Programacion I\\Laboratorio\\Evaluacion_PC01\\demomvc\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
