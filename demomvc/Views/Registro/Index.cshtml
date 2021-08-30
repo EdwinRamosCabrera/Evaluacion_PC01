@@ -1,57 +1,61 @@
-﻿@model demomvc.Models.Registro
+﻿@model IEnumerable<demomvc.Models.Registro>
+
 @{
-    ViewData["Title"] = "Registro";
+    ViewData["Title"] = "Registro de Productos";
 }
 
-<div class="Container">
+<h1>@ViewData["Title"]</h1>
 
-    <div class="row">
-        <div class="col">
+<p>
+    <a asp-action="Create">Ingresar Producto</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
 
-            <h1 style="text-align: center; padding: 1%;">FORMULARIO DE REGISTRO DE VIDEOJUEGOS</h1>
+            <th>
+                @Html.DisplayNameFor(model => model.producto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descuento)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.id">Editar</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.id">Eliminar</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.producto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.categoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.precio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descuento)
+                </td>
 
-            <form asp-controller="Registro" asp-action="Create">
-
-                <div>
-                    <h6><label>Producto:</label></h6>
-                    <input asp-for="producto" class="form-control form-control-sm" />
-
-                    <h6><label style="padding: 1%;">Nombre:</label></h6>
-                    <input asp-for="nombre" class="form-control" />
-                </div>
-
-                <h6 style="padding: 1%;">Categoria:</h6>
-                <div>
-                    <select asp-for="categoria">
-                        <option value="Adultos">Adultos</option>
-                        <option value="Jovenes">Jovenes</option>
-                        <option value="Niños">Niños</option>
-                    </select>
-                </div>
-
-                <div>
-                    <h6 style="padding: 2%;"><label>Precio (S/):</label></h6>
-                    <input asp-for="precio" class="form-control" />
-                </div>
-
-
-                <h6 style="padding: 1%;"><label>Descuento (%):</label></h6>
-                <input asp-for="descuento" class="form-control" />
-
-
-
-                <div style="padding: 2%;" class="form-group">
-                    <button type="submit" class="btn btn-primary">Registrar</button>
-                </div>
-            </form>
-
-            <h3>@ViewData["Message"]</h3>
-
-        </div>
-
-        <div class="col">
-
-        </div>
-    </div>
-
-</div>
+            </tr>
+        }
+    </tbody>
+</table>
